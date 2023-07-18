@@ -1,0 +1,449 @@
+
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: A P-OTF A1ゴシック Std;
+    margin: 0 auto;
+}
+
+
+/*----- life is good -----*/
+
+.loopSlide-myworks {
+	position: absolute;
+	display: flex;
+	flex-flow: row nowrap;
+	width: 1440px;
+	overflow: hidden;
+	padding-top: 120px;
+  opacity: 0.93;
+  }
+  .loopSlide-myworks img{border-radius: 0px;}
+  .loopSlide-myworks ul {
+	padding: 0;
+	display: flex;
+	flex-shrink: 0;
+  }
+  
+  .loopSlide-myworks ul:first-child {
+	animation: slide1 100s -50s linear infinite;
+  }
+  
+  .loopSlide-myworks ul:last-child {
+	animation: slide2 100s linear infinite;
+  }
+  
+  .loopSlide-myworks ul li {
+	display: inline-block;
+	list-style: none;
+	text-align: center;
+	padding-left: 30px;
+  }
+  
+  .loopSlide-myworks ul li img {
+	display: block;
+	
+  }
+	
+	@keyframes slide1 {
+	  0% {
+		transform: translateX(-100%);
+	  }
+	  to {
+		transform: translateX(100%);
+	  }
+	}
+	@keyframes slide2 {
+	  0% {
+		transform: translateX(-200%);
+	  }
+	  to {
+		transform: translateX(0);
+	  }
+	}
+
+
+header{
+    background-color:  rgb(236, 236, 224);
+    height: 700px;
+}
+
+.menu{
+    position: relative;
+    display: inline-block;
+    transform-origin: center;
+    margin-left: 27%;
+}
+.menu ul {
+    text-align: center;
+    z-index: 2;
+    border-radius: 50px;
+    padding: 25px;
+   
+}
+.menu a{ 
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: #20261e;
+    font-size: 18px;
+    transition: all .2s;
+}
+ 
+.menu a:hover{
+    color: #253b18e6;
+    transform: scale(1.03) rotate(7deg);
+   
+}
+.menu li {
+    display: inline-block;
+    margin-right: 170px; /* Khoảng cách giữa các mục */
+}
+.menu li:last-child { margin-right: 0; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
+
+
+
+
+
+  .image-text {
+    position: absolute;
+    padding-top: 10px;
+    font-size: 240px;
+    opacity: 0.95;
+    background-image: url(image/nen-xanh.png) no-repeat;
+    -webkit-background-clip: text; /* Áp dụng phong cách màu chữ cho phần nằm trong text */
+    -webkit-text-fill-color: transparent; /* Màu chữ trong suốt */
+   margin-top: -30px;
+  }
+
+
+
+
+.main{
+    background-image: url(image/nen-cam.png);
+    border-top-left-radius: 750px 250px;
+    border-top-right-radius: 750px 250px;
+    margin-top: -450px;
+    z-index: -5;
+}
+  
+
+
+/*--phan portfolio2022-2023 & icon--*/
+
+ /*  button facebook 
+ .face{
+   font-size: 15px;
+   padding-top: 10px;
+   z-index: 100!important;
+ }
+ .face{
+   text-decoration: none;
+   text-align: center!important;
+   transition: all 0.2s ease;
+ }
+ .face:hover{ border-color:transparent; }
+ .face span {
+   position: absolute;
+   right: 11px;
+   margin-top: 10px;
+   padding-top: 7px;
+   padding-bottom: 7px;
+   padding-left: 13px;
+   padding-right: 13px;
+   background:#253b18;
+   border-radius: 50%;
+   color:rgb(236, 236, 224);
+   transition: all 0.25s ease;
+ }
+ .pushright:before {
+   content: ""!important;
+   width: 100%!important;
+   height: 100%!important;
+   border-radius: 50%!important;
+ }
+ .pushright:hover span {
+   background:#da6c2e;
+   color: rgb(236, 236, 224);
+   transform: translate(2px, 2px);
+ }
+  */
+ /*  button instagram  
+   .insta{
+     font-size: 15px;
+     z-index: 100!important;
+   }
+ .insta{
+     text-decoration: none;
+     text-align: center!important;
+     transition: all 0.2s ease;
+   }
+   .insta:hover{ border-color:transparent; } 
+   .insta span {
+     position: absolute;
+     right: 11px;
+     margin-top: 67px;
+     padding-top: 7px;
+     padding-bottom: 7px;
+     padding-left: 14px;
+     padding-right: 14px;
+     background:#253b18;
+     border-radius: 50%;
+     color:rgb(236, 236, 224);
+     transition: all 0.25s ease;
+   }
+   .pushright:before { 
+     content: ""!important;
+     width: 100%!important;
+     height: 100%!important;
+     border-radius: 50%!important;
+   }
+   .pushright:hover span {
+     background:#da6c2e;
+     color: rgb(236, 236, 224);
+     transform: translate(2px, 2px);
+   }
+  */
+
+
+.aboutqin_midashi{
+  text-align: center;
+  font-size: 45px;
+  padding-top:180px;
+  color: #20261e;
+}  
+.shokai-phai{
+  width: 650px;
+}
+.aboutqin{
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding-top: 50px;
+  column-gap: 80px;
+  color: #20261e;
+}
+
+/* phan skill */
+.gioithieu-skill{
+  text-align: center;
+  padding-top: 100px;
+  color: #20261e;
+  font-size: 16px;
+}
+.nhom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nhom-text{
+  color: #20261e;
+ 
+}
+.skill{
+  display: flex;
+  justify-content: center;
+  column-gap: 140px;
+  padding-top: 40px;
+}
+.ai{
+  display: flex;
+  justify-content: center;
+  background: #3c4838;
+  color: rgb(236, 236, 224);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.ai1{
+  display: flex;
+  justify-content: center;
+  background:rgb(236, 236, 224);
+  color: #20261e;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.skill p{
+  font-size: 14px;
+  align-items: center;
+}
+
+.seikatsu{
+  color: rgb(236, 236, 224);
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  column-gap: 80px;
+  padding-top: 150px;
+}
+.vn-seikatsu{
+  width:350px;
+  background-image: url(image/nen-xanh.png);
+  border-radius: 25px;
+  padding: 50px;
+}  
+.nb-seikatsu{
+  width: 350px;
+  background-image: url(image/nen-xanh.png);
+  border-radius: 25px;
+  padding: 50px;
+}  
+
+
+
+
+/*アコーディオン全体*/
+.accordion-area{
+  list-style: none;
+  width: 96%;
+  max-width: 850px;
+  margin:0 auto;
+  margin-top: 120px;
+}
+
+.accordion-area li{
+  margin: 20px 0;
+}
+
+.accordion-area section {
+  border: 1px solid #20261e;
+background-image: url(image/nen-xanh.png);
+border-radius: 25px;
+color: rgb(236, 236, 224);
+}
+
+/*アコーディオンタイトル*/
+.title {
+  position: relative;/*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size:1rem;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all .5s ease;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+  position: absolute;
+  content:'';
+  width: 15px;
+  height: 2px;
+  background-color: rgb(236, 236, 224);
+
+}
+.title::before{
+  top:48%;
+  left: 15px;
+  transform: rotate(0deg);
+  
+}
+.title::after{    
+  top:48%;
+  left: 15px;
+  transform: rotate(90deg);
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+transform: rotate(45deg);
+}
+
+.title.close::after{
+transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.boxx {
+  display: none;/*はじめは非表示*/
+  background: rgb(236, 236, 224);
+  border-radius: 20px;
+  color: #20261e;
+  margin:0 3% 3% 3%;
+  padding: 3%;
+  
+}
+
+
+/*  button see more-gra */
+.button-more1{
+  vertical-align:middle; 
+ padding-top: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.btntextchange1{
+  position: relative;
+  background:rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  min-width:100px;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: #253b18;
+  outline: none;
+  transition: all .2s;
+}
+.btntextchange1:hover{
+  background:#3c4838;
+  color: rgb(236, 236, 224);
+  min-width:190px;
+  font-size: 20px;
+  padding-bottom: 25px;
+}
+.btntextchange1 span{
+  position: absolute;
+  left: 50%;top:50%;
+  transform:translate(-50%,-50%);
+  transition: all .5s;
+  display: block;
+  white-space: nowrap;
+}
+.btntextchange1 span:nth-child(2){opacity:0;}
+.btntextchange1:hover span:nth-child(1){opacity:0;}
+.btntextchange1:hover span:nth-child(2){opacity:1;}
+
+
+/*------ ***** phan footer ****** ------*/
+/*------ ***** phan footer ****** ------*/
+footer{background-image: url(image/nen-cam.png)}
+
+.footer-menu ul {
+ text-align: center;
+ background-image: url(image/nen-xanh.png);
+ margin: 0px 50px;
+ border-radius: 50px;
+ padding: 25px;
+ margin-top: 100px;
+}
+.footer-menu a{
+  list-style: none;
+  text-decoration: none;
+  color: rgb(236, 236, 224);
+  font-size: 18px;
+  transition: all .2s;
+}
+.footer-menu a:hover{
+  color: #da6c2e;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-right: 170px; /* Khoảng cách giữa các mục */
+}
+.footer-menu li:last-child { margin-right: 0; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
+
+
+
+.tdq{
+  font-size: 12px;
+  color: #20261e;
+  letter-spacing: 0.5em;
+  text-align: center;
+  padding: 10px;
+}
