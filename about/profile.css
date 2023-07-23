@@ -1,0 +1,452 @@
+
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: A P-OTF A1ゴシック Std;
+    margin: 0 auto;
+}
+
+
+
+
+@media screen and (max-width: 767px){
+   
+  .loopSlide ul li img {
+    height: 100px!important;
+  }
+  .loopSlide {
+    margin-top: -20px!important;
+  }
+  .menu li{
+    position: relative;
+    margin-right: 40px!important;
+    margin-top: 10px!important;
+  }
+  .menu li:last-child { margin-right: 0px!important; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
+
+  .main{
+    margin-top: -530px!important;
+  }
+  .aboutqin_midashi{
+    font-size: 35px!important;
+    padding-top: 70px!important;
+  }
+  .aboutqin{
+    display: block!important;
+  }
+  .shokai-trai{
+    font-size: 12px!important;
+    text-align: center;
+  }
+  .shokai-phai{
+    padding-top: 10px;
+    font-size: 12px!important;
+    width: 320px!important;
+    margin: 0 auto!important;
+  }
+
+  .gioithieu-skill{
+    padding-top: 50px!important;
+    font-size: 14px!important;
+  }
+  .skill{
+    padding-top: 20px!important;
+    column-gap: 20px!important;
+  }
+  .skill p{
+    font-size: 10px!important;
+  }
+
+
+  .accordion-area{
+    font-size: 12px;
+    margin-top: 70px!important;
+  }
+  .button-more1{
+    padding-top: 50px!important;
+    padding-bottom: 20px;
+  }
+  .footer-menu{display: none;}
+
+
+  .tdq{
+    font-size: 10px!important;
+    padding-bottom: 30px!important;
+  }
+
+}
+
+
+
+
+
+
+
+/*----- life is good -----*/
+
+.loopSlide {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  padding-top: 30px;
+}
+.loopSlide ul {
+  padding: 0;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.loopSlide ul:first-child {
+  animation: slide1 100s -50s linear infinite;
+}
+
+.loopSlide ul:last-child {
+  animation: slide2 100s linear infinite;
+}
+
+.loopSlide ul li {
+  display: inline-block;
+  margin-left: 30px;
+  list-style: none;
+  text-align: center;
+}
+
+.loopSlide ul li img {
+  display: block;
+  height: 250px;
+}
+.slide-text{
+  color: rgb(236, 236, 224);
+  font-size: 16px;
+  padding-top: 5px;
+} 
+
+  @keyframes slide1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes slide2 {
+    0% {
+      transform: translateX(-200%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+
+header{
+    background-color:  rgb(236, 236, 224);
+    height: 700px;
+}
+
+.menu{
+    position: relative;
+    display: inline-block;
+    transform-origin: center;
+    top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu ul {
+    text-align: center;
+    z-index: 2;
+    border-radius: 50px;
+    padding: 25px;
+   
+}
+.menu a{ 
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: #20261e;
+    font-size: 18px;
+    transition: all .2s;
+}
+ 
+.menu a:hover{
+    color: #253b18e6;
+    transform: scale(1.03) rotate(7deg);
+   
+}
+.menu li {
+    display: inline-block;
+    margin-right: 170px; /* Khoảng cách giữa các mục */
+}
+.menu li:last-child { margin-right: 0; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
+
+
+
+
+
+  .image-text {
+    position: absolute;
+    padding-top: 10px;
+    font-size: 240px;
+    opacity: 0.95;
+    background-image: url(image/nen-xanh.png) no-repeat;
+    -webkit-background-clip: text; /* Áp dụng phong cách màu chữ cho phần nằm trong text */
+    -webkit-text-fill-color: transparent; /* Màu chữ trong suốt */
+   margin-top: -30px;
+  }
+
+
+.main{
+    background-image: url(image/nen-cam.png);
+    border-top-left-radius: 750px 250px;
+    border-top-right-radius: 750px 250px;
+    margin-top: -450px;
+    z-index: -5;
+}
+
+.aboutqin_midashi{
+  text-align: center;
+  font-size: 45px;
+  padding-top:180px;
+  color: #20261e;
+}  
+.shokai-phai{
+  width: 650px;
+}
+.aboutqin{
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  padding-top: 50px;
+  column-gap: 80px;
+  color: #20261e;
+}
+
+/* phan skill */
+.gioithieu-skill{
+  text-align: center;
+  padding-top: 100px;
+  color: #20261e;
+  font-size: 16px;
+}
+.nhom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nhom-text{
+  color: #20261e;
+ 
+}
+.skill{
+  display: flex;
+  justify-content: center;
+  column-gap: 140px;
+  padding-top: 40px;
+}
+.ai{
+  display: flex;
+  justify-content: center;
+  background: #3c4838;
+  color: rgb(236, 236, 224);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.ai1{
+  display: flex;
+  justify-content: center;
+  background:rgb(236, 236, 224);
+  color: #20261e;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+.skill p{
+  font-size: 14px;
+  align-items: center;
+}
+
+.seikatsu{
+  color: rgb(236, 236, 224);
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  column-gap: 80px;
+  padding-top: 150px;
+}
+.vn-seikatsu{
+  width:350px;
+  background-image: url(image/nen-xanh.png);
+  border-radius: 25px;
+  padding: 50px;
+}  
+.nb-seikatsu{
+  width: 350px;
+  background-image: url(image/nen-xanh.png);
+  border-radius: 25px;
+  padding: 50px;
+}  
+
+
+
+
+/*アコーディオン全体*/
+.accordion-area{
+  list-style: none;
+  width: 96%;
+  max-width: 850px;
+  margin:0 auto;
+  margin-top: 120px;
+}
+
+.accordion-area li{
+  margin: 20px 0;
+  filter: drop-shadow(7px 7px 3px rgba(0, 0, 0, 0.3));
+}
+
+.accordion-area li:hover{
+
+}
+
+.accordion-area section {
+  border: 1px solid #00000000;
+background-image: url(image/nen-xanh.png);
+border-radius: 25px;
+color: rgb(236, 236, 224);
+}
+
+/*アコーディオンタイトル*/
+.title {
+  position: relative;/*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size:1rem;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all .5s ease;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+  position: absolute;
+  content:'';
+  width: 15px;
+  height: 2px;
+  background-color: rgb(236, 236, 224);
+
+}
+.title::before{
+  top:48%;
+  left: 15px;
+  transform: rotate(0deg);
+  
+}
+.title::after{    
+  top:48%;
+  left: 15px;
+  transform: rotate(90deg);
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+transform: rotate(45deg);
+}
+
+.title.close::after{
+transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.boxx {
+  display: none;/*はじめは非表示*/
+  background: rgb(236, 236, 224);
+  border-radius: 20px;
+  color: #20261e;
+  margin:0 3% 3% 3%;
+  padding: 3%;
+  
+}
+
+
+/*  button see more-gra */
+.button-more1{
+  vertical-align:middle; 
+ padding-top: 100px;
+  text-align: center;
+  font-size: 20px;
+}
+.btntextchange1{
+  position: relative;
+  background:rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  min-width:100px;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: #253b18;
+  outline: none;
+  transition: all .2s;
+}
+.btntextchange1:hover{
+  background:#3c4838;
+  color: rgb(236, 236, 224);
+  min-width:190px;
+  font-size: 20px;
+  padding-bottom: 25px;
+}
+.btntextchange1 span{
+  position: absolute;
+  left: 50%;top:50%;
+  transform:translate(-50%,-50%);
+  transition: all .5s;
+  display: block;
+  white-space: nowrap;
+}
+.btntextchange1 span:nth-child(2){opacity:0;}
+.btntextchange1:hover span:nth-child(1){opacity:0;}
+.btntextchange1:hover span:nth-child(2){opacity:1;}
+
+
+/*------ ***** phan footer ****** ------*/
+/*------ ***** phan footer ****** ------*/
+footer{background-image: url(image/nen-cam.png)}
+
+.footer-menu ul {
+ text-align: center;
+ background-image: url(image/nen-xanh.png);
+ margin: 0px 50px;
+ border-radius: 50px;
+ padding: 25px;
+ margin-top: 100px;
+}
+.footer-menu a{
+  list-style: none;
+  text-decoration: none;
+  color: rgb(236, 236, 224);
+  font-size: 18px;
+  transition: all .2s;
+}
+.footer-menu a:hover{
+  color: #da6c2e;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-right: 170px; /* Khoảng cách giữa các mục */
+}
+.footer-menu li:last-child { margin-right: 0; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
+
+
+
+.tdq{
+  font-size: 12px;
+  color: #20261e;
+  letter-spacing: 0.5em;
+  text-align: center;
+  padding: 10px;
+}
