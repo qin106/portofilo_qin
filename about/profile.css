@@ -18,12 +18,12 @@ body {
     height: 100px!important;
   }
   .loopSlide {
-    margin-top: -20px!important;
+    margin-top: -50px!important;
   }
   .menu li{
     position: relative;
     margin-right: 40px!important;
-    margin-top: 10px!important;
+    margin-top: 40px!important;
   }
   .menu li:last-child { margin-right: 0px!important; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
 
