@@ -19,14 +19,14 @@ header{
   .menu li{
 		position: relative;
 		margin-right: 40px!important;
-		margin-top: 10px!important;
+		margin-top: 40px!important;
   }
   .menu li:last-child { margin-right: 0px!important; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
   .loopSlide ul li img {
     height: 100px!important;
   }
   .loopSlide {
-    margin-top: -60px!important;
+    margin-top: -100px!important;
   }
   main{
     margin-top: -530px!important;
