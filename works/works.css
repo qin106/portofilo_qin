@@ -26,7 +26,7 @@ header{
     height: 100px!important;
   }
   .loopSlide {
-    margin-top: -100px!important;
+    margin-top: -60px!important;
   }
   main{
     margin-top: -530px!important;
@@ -348,7 +348,7 @@ header{
 	display: flex;
 	flex-flow: row nowrap;
 	overflow: hidden;
-	padding-top: 30px;
+	margin-top: -10px;
   }
   .loopSlide ul {
 	padding: 0;
@@ -471,7 +471,7 @@ main{
     background-image: url(image/nen-cam.png);
     border-top-left-radius: 750px 250px;
     border-top-right-radius: 750px 250px;
-    margin-top: -470px;
+    margin-top: -440px;
 	padding-top: 200px;
 }
 
