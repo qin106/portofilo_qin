@@ -1,0 +1,774 @@
+@charset "utf-8";
+
+
+body {
+    font-family: "nitalago-rera", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 1.3px;
+  line-height: 1.5em;
+    margin: 0 auto;
+}
+
+  
+header{
+    background-image: url(image/nen-xanh.png);
+    height: 700px;
+	z-index: -1;
+}
+
+
+/*----- life is good -----*/
+
+  .loopSlide-myworks {
+	position: absolute;
+	display: flex;
+	flex-flow: row nowrap;
+	width: 1440px;
+	overflow: hidden;
+	padding-top: 120px;
+	opacity: 0.93;
+  }
+  .loopSlide-myworks img{border-radius: 0px;}
+  .loopSlide-myworks ul {
+	padding: 0;
+	display: flex;
+	flex-shrink: 0;
+  }
+  
+  .loopSlide-myworks ul:first-child {
+	animation: slide1 100s -50s linear infinite;
+  }
+  
+  .loopSlide-myworks ul:last-child {
+	animation: slide2 100s linear infinite;
+  }
+  
+  .loopSlide-myworks ul li {
+	display: inline-block;
+	list-style: none;
+	text-align: center;
+	padding-left: 30px;
+  }
+  
+  .loopSlide-myworks ul li img {
+	display: block;
+	
+  }
+	
+	@keyframes slide1 {
+	  0% {
+		transform: translateX(-100%);
+	  }
+	  to {
+		transform: translateX(100%);
+	  }
+	}
+	@keyframes slide2 {
+	  0% {
+		transform: translateX(-200%);
+	  }
+	  to {
+		transform: translateX(0);
+	  }
+	}
+
+/*----- thanh menu  -----*/
+
+.menu{
+    position: relative;
+    display: inline-block;
+    transform-origin: center;
+    margin-left: 30%;
+	z-index: 1;
+	font-family: "ratio", sans-serif;
+}
+.menu ul {
+    text-align: center;
+    z-index: 2;
+    border-radius: 50px;
+    padding: 10px;
+	margin-top: 40px;
+}
+.menu a{ 
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(236, 236, 224);
+    font-size: 20px;
+    transition: all .2s;
+}
+.menu a:hover{
+    color: #da6c2e;
+    transform: scale(1.03) rotate(7deg);
+}
+.menu li {
+    display: inline-block;
+    margin-right: 170px; /* Khoảng cách giữa các mục */
+}
+.menu li:last-child { margin-right: 0; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
+
+/*----- chu my works slide  -----*/
+.image-text {
+    position: absolute;
+    font-size: 230px;
+    opacity: 0.95;
+	color: rgba(236, 236, 224, 0.838);
+	margin-top: 10px;
+}
+.image-container1 {
+	width: 200px; /* Điều chỉnh kích thước container theo ý muốn */
+	overflow: hidden;
+}
+.image-text {
+	white-space: nowrap;
+	animation: slide 150s linear infinite; /* Điều chỉnh thời gian chạy và hiệu ứng theo ý muốn */
+}
+.image-text span {
+	display: inline-block;
+	animation: fade 100s ease-in-out infinite alternate; /* Điều chỉnh thời gian chạy và hiệu ứng theo ý muốn */
+}
+
+@keyframes slide {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-100%); }}
+@keyframes fade {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 1; }}
+@keyframes jump {
+	0% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
+	100% { transform: translateY(0); }}
+
+/*----- phan main  -----*/
+main{
+    background-image: url(image/nen-cam.png);
+    border-top-left-radius: 750px 250px;
+    border-top-right-radius: 750px 250px;
+    margin-top: -470px;
+	padding-top: 200px;
+}
+
+/*----- balloon web&gra  -----*/
+.tab{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+	padding-top: 50px;
+	
+}
+.tab li a{
+	display: block;
+	padding:20px 40px;
+	text-decoration: none;
+	color: #da6c2e;
+	border-radius: 50px;
+	background-color:#333d2f;
+	animation: jump 1.2s infinite;
+	font-size: 30px;	
+	font-family: "ratio", sans-serif;
+}
+
+
+
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+	position: relative;
+	z-index: 30;
+}
+
+@keyframes displayAnime{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/*----- phan web  -----*/
+
+.web-hang-1{
+	display: flex;
+	justify-content: center;
+	column-gap: 30px;
+	padding-top: 60px;
+}
+.web-hang-2{
+	display: flex;
+	justify-content: center;
+	column-gap: 30px;
+	padding-top: 30px;
+	margin-bottom: 150px;
+}
+/*----- phan   -----*/
+
+
+
+
+/*----- tung khung trang web ------*/
+
+
+
+.image-container {
+    width: 230px;
+	height: 180px;
+	overflow: hidden;
+	border-radius: 15px;
+	border: 2px solid black;
+}
+.image-container img {
+	transition: transform 0.3s;
+}
+.image-container:hover img {
+	transform: scale(1.2);
+}
+
+
+
+/*----- tao bong bong chu khi hover -----*/  
+  .balloon {
+	display: none;
+	position: absolute;
+	font-size: 14px;
+	top: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	padding: 2px 15px;
+	background-color: rgb(236, 236, 224);
+	border: 1.7px solid #000000;
+	border-radius: 50px;
+	color: rgb(0, 0, 0);
+	animation: balloonFadeIn 0.3s ease-in-out forwards;
+	text-align: center;
+  }
+  .balloon::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 10px solid rgb(236, 236, 224);
+  }
+
+  .balloon1 {
+	display: none;
+	position: absolute;
+	font-size: 14px;
+	top: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 130px;
+	padding: 2px 15px;
+	background-color: rgb(236, 236, 224);
+	border: 1.7px solid #000000;
+	border-radius: 50px;
+	color: rgb(0, 0, 0);
+
+	text-align: center;
+  }
+  .balloon1::after {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 10px solid rgb(236, 236, 224);
+  }
+  
+.w-1:hover .balloon {display: block;}
+.w-2:hover .balloon {display: block;}
+.w-3:hover .balloon {display: block;}
+.w-4:hover .balloon {display: block;}
+.w-5:hover .balloon1 {display: block;}
+.w-6:hover .balloon1 {display: block;}
+.w-7:hover .balloon1 {display: block;}
+.w-8:hover .balloon1 {display: block;}
+.w-9:hover .balloon1 {display: block;}
+
+.w-1 {position: relative;}
+.w-2 {position: relative;}
+.w-3 {position: relative;}
+.w-4 {position: relative;}
+.w-5 {position: relative;}
+.w-6 {position: relative;}
+.w-7 {position: relative;}
+.w-8 {position: relative;}
+.w-9 {position: relative;}
+  
+  @keyframes balloonFadeIn {
+	0% {
+	  opacity: 0;
+	  transform: translate(-50%, -10px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translate(-50%, 0);
+	}
+  }
+  
+  @keyframes balloonFadeOut {
+	0% {
+	  opacity: 1;
+	  transform: translate(-50%, 0);
+	}
+	100% {
+	  opacity: 0;
+	  transform: translate(-50%, -10px);
+	}
+  }
+  
+
+/*------------------------- ========  GRAPHIC  ======== ---------------------------*/
+
+.g-1{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	column-gap: 20px;
+	margin-bottom: 20px;
+	
+}
+
+
+
+/*--- meishi ---*/
+/*--- meishi ---*/
+/*--- meishi ---*/
+.bgDU{
+	position:relative;/*テキストの基点となる位置を定義*/
+	width:367px;
+	height: 300px;
+	margin-top: 70px;
+}
+
+.bgDU span.mask{
+	position:relative;/*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+	border-radius: 11px;
+}
+
+.bgDU span.mask::before{
+	content:"";
+	position: absolute;
+	z-index: 2;
+	opacity:0;/*透過0*/
+	transition: .4s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+	background-color: #000000ab;;
+	width:366px;
+	height: 301px;	
+	border-radius: 11px;
+}
+
+.bgDU:hover span.mask::before{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+	transform: translateY(0);
+}
+
+.bgDU span.cap{/*画像の上のテキスト*/
+	position: absolute;
+	opacity:0;/*透過0*/
+	font-size: 14px;
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+	z-index:3;/*テキストを前面に出す*/
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);/*テキストの位置中央指定*/
+	color: #efefef;
+    line-height: 1.5;/*行の高さを1.5にする*/
+	width: 220px;
+}
+
+.bgDU:hover span.cap{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+}
+
+/*--- yaki ---*/
+/*--- yaki ---*/
+/*--- yaki ---*/
+.bgDU-yaki{
+	position:relative;/*テキストの基点となる位置を定義*/
+	width:385px;
+	height: 300px;
+	margin-top: 70px;
+}
+
+.bgDU-yaki span.mask{
+	position:relative;/*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+	border-radius: 10px;
+}
+
+.bgDU-yaki span.mask::before{
+	content:"";
+	position: absolute;
+	z-index: 2;
+	opacity:0;/*透過0*/
+	transition: .4s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+	background-color: #000000ab;
+	border-radius: 10px;
+	width:385px;
+	height: 300px;	
+}
+
+.bgDU-yaki:hover span.mask::before{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+	transform: translateY(0);
+}
+
+.bgDU-yaki span.cap{/*画像の上のテキスト*/
+	position: absolute;
+	opacity:0;/*透過0*/
+	font-size: 14px;
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+	z-index:3;/*テキストを前面に出す*/
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);/*テキストの位置中央指定*/
+	color: #efefef;
+    line-height: 1.5;/*行の高さを1.5にする*/
+}
+
+.bgDU-yaki:hover span.cap{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+}
+
+
+/*--- sushu & tenkai ---*/
+/*--- sushu & tenkai ---*/
+/*--- sushu & tenkai ---*/
+.bgDU-sushi{
+	position:relative;/*テキストの基点となる位置を定義*/
+	width:241px;
+	height: 340px;
+	border: 2px solid #000000;
+	border-radius: 11px;
+}
+
+.bgDU-sushi span.mask{
+	position:relative;/*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+	border-radius: 10px;
+}
+
+.bgDU-sushi span.mask::before{
+	content:"";
+	position: absolute;
+	z-index: 2;
+	opacity:0;/*透過0*/
+	transition: .4s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+	background-color: #000000ab;
+	border-radius: 10px;
+	width: 241px;
+	height: 340px;	
+}
+
+.bgDU-sushi:hover span.mask::before{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+	transform: translateY(0);
+}
+
+.bgDU-sushi span.cap{/*画像の上のテキスト*/
+	position: absolute;
+	opacity:0;/*透過0*/
+	font-size: 14px;
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+	z-index:3;/*テキストを前面に出す*/
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);/*テキストの位置中央指定*/
+	color: #efefef;
+    line-height: 1.5;/*行の高さを1.5にする*/
+	width: 130px;
+	
+}
+
+.bgDU-sushi:hover span.cap{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+}
+
+/*--- mizu ---*/
+/*--- mizu ---*/
+/*--- mizu ---*/
+.bgDU-mizu{
+	position:relative;/*テキストの基点となる位置を定義*/
+	width:490px;
+    border: 2px solid #000000;
+	border-radius: 11px;
+}
+
+.bgDU-mizu span.mask{
+	position:relative;/*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+	border-radius: 10px;
+}
+
+.bgDU-mizu span.mask::before{
+	content:"";
+	position: absolute;
+	z-index: 2;
+	opacity:0;/*透過0*/
+	transition: .4s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+	background-color: #000000ab;
+	border-radius: 10px;
+	width:490px;
+	height: 350px;
+}
+
+.bgDU-mizu:hover span.mask::before{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+	transform: translateY(0);
+}
+
+.bgDU-mizu span.cap{/*画像の上のテキスト*/
+	position: absolute;
+	opacity:0;/*透過0*/
+	font-size: 14px;
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+	z-index:3;/*テキストを前面に出す*/
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);/*テキストの位置中央指定*/
+	color: #efefef;
+    line-height: 1.5;/*行の高さを1.5にする*/
+}
+
+.bgDU-mizu:hover span.cap{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+}
+
+
+
+
+
+.bgDU-mizuu{
+	position:relative;/*テキストの基点となる位置を定義*/
+	width:480px;
+    border: 2px solid #000000;
+	border-radius: 11px;
+}
+
+.bgDU-mizuu span.mask{
+	position:relative;/*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+	border-radius: 10px;
+}
+
+.bgDU-mizuu span.mask::before{
+	content:"";
+	position: absolute;
+	z-index: 2;
+	opacity:0;/*透過0*/
+	transition: .4s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+	background-color: #00000099;
+	border-radius: 10px;
+	width:490px;
+	height: 350px;
+}
+
+.bgDU-mizuu:hover span.mask::before{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+	transform: translateY(0);
+}
+
+.bgDU-mizuu span.cap{/*画像の上のテキスト*/
+	position: absolute;
+	opacity:0;/*透過0*/
+	font-size: 14px;
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+	z-index:3;/*テキストを前面に出す*/
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);/*テキストの位置中央指定*/
+	color: #efefef;
+    line-height: 1.5;/*行の高さを1.5にする*/
+    width: 330px;
+}
+
+.bgDU-mizuu:hover span.cap{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+}
+
+/*--- sake ---*/
+/*--- sake ---*/
+/*--- sake ---*/
+.bgDU-sake{
+	position:relative;/*テキストの基点となる位置を定義*/
+	width:478px;
+    height: 340px;
+	border: 2px solid #000000;
+	border-radius: 11px;
+}
+
+.bgDU-sake span.mask{
+	position:relative;/*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+	border-radius: 10px;
+}
+
+.bgDU-sake span.mask::before{
+	content:"";
+	position: absolute;
+	z-index: 2;
+	opacity:0;/*透過0*/
+	transition: .4s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+	background-color: #000000ab;
+	border-radius: 10px;
+	width:478px;
+	height: 340px;
+}
+
+.bgDU-sake:hover span.mask::before{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+	transform: translateY(0);
+}
+
+.bgDU-sake span.cap{/*画像の上のテキスト*/
+	position: absolute;
+	opacity:0;/*透過0*/
+	font-size: 14px;
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+	z-index:3;/*テキストを前面に出す*/
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);/*テキストの位置中央指定*/
+	color:#efefef;
+    line-height: 1.5;/*行の高さを1.5にする*/
+}
+
+.bgDU-sake:hover span.cap{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+}
+
+/*--- poster ---*/
+/*--- poster ---*/
+/*--- poster ---*/
+.bgDU-poster{
+	position:relative;/*テキストの基点となる位置を定義*/
+	width:235px;
+    height: 340px;
+	border: 2px solid #000000;
+	border-radius: 11px;
+}
+
+.bgDU-poster span.mask{
+	position:relative;/*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+	border-radius: 10px;
+}
+
+.bgDU-poster span.mask::before{
+	content:"";
+	position: absolute;
+	z-index: 2;
+	opacity:0;/*透過0*/
+	transition: .4s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+	background-color: #000000ab;
+	border-radius: 10px;
+	width:235px;
+	height: 340px;
+}
+
+.bgDU-poster:hover span.mask::before{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+	transform: translateY(0);
+}
+
+.bgDU-poster span.cap{/*画像の上のテキスト*/
+	position: absolute;
+	opacity:0;/*透過0*/
+	font-size: 14px;
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+	z-index:3;/*テキストを前面に出す*/
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);/*テキストの位置中央指定*/
+	color: #efefef;
+    line-height: 1.5;/*行の高さを1.5にする*/
+}
+
+.bgDU-poster:hover span.cap{/*hoverした時の変化*/
+	opacity:1;/*透過なしに変化*/
+}
+
+
+
+
+
+
+
+/*------ ***** phan footer ****** ------*/
+/*------ ***** phan footer ****** ------*/
+
+.footer-menu ul {
+ text-align: center;
+ background-image: url(image/nen-xanh.png);
+ margin: 0px 50px;
+ border-radius: 50px;
+ padding: 25px;
+margin-top: 200px;
+font-family: "ratio", sans-serif;
+ 
+}
+.footer-menu a{
+  list-style: none;
+  text-decoration: none;
+  color: rgb(236, 236, 224);
+  font-size: 18px;
+  transition: all .2s;
+}
+.footer-menu a:hover{
+  color: #da6c2e;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-right: 170px; /* Khoảng cách giữa các mục */
+}
+.footer-menu li:last-child { margin-right: 0; /* Loại bỏ khoảng cách phải của mục cuối cùng */}
+
+
+
+.tdq{
+  font-size: 12px;
+  color: #20261e;
+  letter-spacing: 0.5em;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
